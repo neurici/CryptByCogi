@@ -152,7 +152,7 @@ def choice():
             quit()
 
     except(KeyboardInterrupt):
-        print("Program intrerupt de utilizator")
+        print("\nProgram intrerupt de utilizator")
         exit
 
 choice()
