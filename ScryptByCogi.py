@@ -11,7 +11,7 @@ from colorama import init
 from Crypto.Cipher import AES
 from colorama import Fore, Style
 
-version = "1.0"
+version = "2.0"
 
 init()
 
@@ -29,22 +29,23 @@ banner = r'''
 |                          [Creat de Cogian Sergiu]                         |
 |                                                                           |
 |                                                                           |
-|		   Tastati 'E' pentru a cripta un fisier                    |
-|		   Tastati 'D' pentru a decripta un fisier                  |
-|		   Tastati 'I' pentru a inchide aplicatia                   |
+|		   Tastati 'E' pentru a cripta un fisier                            |
+|		   Tastati 'D' pentru a decripta un fisier                          |
+|		   Tastati 'I' pentru a inchide aplicatia                           |
+|          Tastați 'U' pentru actualizarea aplicatiei                       |
 =============================================================================
 '''
 print(Fore.LIGHTBLUE_EX + banner)
 print(Style.RESET_ALL)
 
 def update():
-    print("Checking for updates...")
-    Secret_Keeper = requests.get("https://raw.githubusercontent.com/Sameera-Madhushan/Secret-Keeper/master/Secret-Keeper.py").content.decode(
+    print("Verificare actualizari...")
+    Secret_Keeper = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/ScryptByCogi.py").content.decode(
         "UTF-8")
     if version not in Secret_Keeper:
-        co = input("A new version of Secret Keeper is available. Would you like to update?[yes/no] - ").lower()
-        if co == "yes":
-            os.system('cd .. && rm -r Secret-Keeper && git clone https://github.com/Sameera-Madhushan/Secret-Keeper')
+        co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați?[da/nu] - ").lower()
+        if co == "da":
+            os.system('cd .. && rm -r Secret-Keeper && git clone https://github.com/neurici/CryptByCogi.git')
         if co == "no":
             print(Fore.LIGHTBLUE_EX + banner)
             choice()
