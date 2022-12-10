@@ -32,7 +32,7 @@ banner = r'''
 |		   Tastati 'E' pentru a cripta un fisier                            |
 |		   Tastati 'D' pentru a decripta un fisier                          |
 |		   Tastati 'I' pentru a inchide aplicatia                           |
-|          Tastați 'U' pentru actualizarea aplicatiei                       |
+|          Tastați 'U' pentru actualizarea aplicatiei                        |
 =============================================================================
 '''
 print(Fore.LIGHTBLUE_EX + banner)
@@ -43,7 +43,7 @@ def update():
     CryptByCogi = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/ScryptByCogi.py").content.decode(
         "UTF-8")
     if version not in CryptByCogi:
-        co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați?[da/nu] - ").lower()
+        co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați? [da/nu] - ").lower()
         if co == "da":
             os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git')
         if co == "no":
