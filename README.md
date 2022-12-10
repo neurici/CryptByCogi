@@ -2,7 +2,7 @@
 
 CryptByCogi este un criptor/decriptor de fișiere scris în python care criptează fișierele dvs. folosind Advanced Encryption Standard (AES). <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_Block_Chaining_(CBC)" target="_blank"><span style="color: blue">Modul CBC</span></a> este folosit la crearea codului AES, în care fiecare bloc este înlănțuit la blocul anterior din flux.
 
-![123](https://user-images.githubusercontent.com/35377569/48672510-c9cd6580-eb5c-11e8-9f2e-1712c484a23b.jpg)
+![123](https://raw.githubusercontent.com/neurici/CryptByCogi/main/screen.png)
 
 ### Caracteristici
 - [x] CryptByCogi are capacitatea de a genera o cheie de criptare aleatorie pe baza unei chei(parole) introdusă de utilizator.
