@@ -29,7 +29,7 @@ banner = r'''
 |                          [Creat de Cogian Sergiu]                         |
 |                                                                           |
 |                                                                           |
-|		   Tastati 'E' pentru a cripta un fisier                    |
+|		   Tastati 'C' pentru a cripta un fisier                    |
 |		   Tastati 'D' pentru a decripta un fisier                  |
 |		   Tastati 'I' pentru a inchide aplicatia                   |
 |                  Tastați 'U' pentru actualizarea aplicatiei               |
