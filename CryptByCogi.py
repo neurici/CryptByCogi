@@ -40,12 +40,12 @@ print(Style.RESET_ALL)
 
 def update():
     print("Verificare actualizari...")
-    Secret_Keeper = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/ScryptByCogi.py").content.decode(
+    CryptByCogi = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/ScryptByCogi.py").content.decode(
         "UTF-8")
-    if version not in Secret_Keeper:
+    if version not in CryptByCogi:
         co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați?[da/nu] - ").lower()
         if co == "da":
-            os.system('cd .. && rm -r Secret-Keeper && git clone https://github.com/neurici/CryptByCogi.git')
+            os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git')
         if co == "no":
             print(Fore.LIGHTBLUE_EX + banner)
             choice()
