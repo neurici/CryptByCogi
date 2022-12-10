@@ -1,0 +1,8 @@
+certifi
+chardet
+colorama
+funcy
+idna
+pycryptodome
+requests
+urllib3
