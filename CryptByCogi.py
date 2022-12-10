@@ -45,7 +45,7 @@ def update():
     if version not in CryptByCogi:
         co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați? [da/nu] - ").lower()
         if co == "da":
-            os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git')
+            os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git && cd .. && cd CryptByCogi')
         if co == "nu":
             print(Fore.LIGHTBLUE_EX + banner)
             choice()
