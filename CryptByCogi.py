@@ -38,7 +38,7 @@ banner = r'''
 print(Fore.LIGHTBLUE_EX + banner)
 print(Style.RESET_ALL)
 
-def update():
+def actualizare():
     print("Verificare actualizari...")
     CryptByCogi = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/CryptByCogi.py").content.decode(
         "UTF-8")
@@ -146,13 +146,13 @@ def choice():
             decryptFile(input("Introduceti numele fisierului pe care doriti sa il decriptati:~ "))
 
         if selection == 'U':
-            update()
+            actualizare()
 
-        if selection == 'Q':
+        if selection == 'i':
             quit()
 
     except(KeyboardInterrupt):
-        print("Program intrerupt")
+        print("Program intrerupt de utilizator")
         exit
 
 choice()
