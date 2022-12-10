@@ -11,7 +11,7 @@ from colorama import init
 from Crypto.Cipher import AES
 from colorama import Fore, Style
 
-version = "2.2"
+version = "1.0"
 
 init()
 
