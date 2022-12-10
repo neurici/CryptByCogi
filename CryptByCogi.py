@@ -63,7 +63,7 @@ def update():
         exit()
 
 def quit():
-    alpha = input("Sunteti sigur?[da/nu] - ").lower()
+    alpha = input("Sunteti sigur? [da/nu] - ").lower()
     if alpha == "da":
         exit()
     if alpha == "nu":
@@ -72,10 +72,10 @@ def quit():
 
 def choice():
     try:
-        selection = input("root@CriptServer:- ").upper()
+        selection = input("root@CriptServer:~ ").upper()
         if selection == "C":
 
-            usr_key = input("Introduceti o cheie care va fi utilizata ca cheie de criptare:- ")
+            usr_key = input("Introduceti o cheie care va fi utilizata ca cheie de criptare:~ ")
             salt = b'\x9aX\x10\xa6^\x1fUVu\xc0\xa2\xc8\xff\xceOV'
             key = Crypto.Protocol.KDF.PBKDF2(password=usr_key, salt=salt, dkLen=32, count=10000)
             iv = Random.new().read(AES.block_size)
@@ -105,7 +105,7 @@ def choice():
                             chunk = pad(chunk)
                             outFile.write(base64.b64encode(cipher.encrypt(chunk)))
                 os.remove(fileIn)
-            encryptFile(input("Introduceti numele fisierului pe care doriti sa il criptati:- "))
+            encryptFile(input("Introduceti numele fisierului pe care doriti sa il criptati:~ "))
 
 
         if selection == "D":
@@ -125,7 +125,7 @@ def choice():
                 with open(fileIn, "rb") as encryptedFile:
                     encrypted = base64.b64decode(encryptedFile.read(64))
                     setup = encrypted[:48]
-                    key_confirm = input("Va rog sa introduceti cheia folosita pentru criptarea fisierului:- ")
+                    key_confirm = input("Va rog sa introduceti cheia folosita pentru criptarea fisierului:~ ")
                     salt = b'\x9aX\x10\xa6^\x1fUVu\xc0\xa2\xc8\xff\xceOV'
                     key_check = Crypto.Protocol.KDF.PBKDF2(password=key_confirm, salt=salt, dkLen=32, count=10000)
                     if key_check == setup[:32]:
@@ -143,7 +143,7 @@ def choice():
                             decrypted_chunk = unpad(cipher.decrypt(chunk))
                             decryptedFile.write(decrypted_chunk)
 
-            decryptFile(input("Introduceti numele fisierului pe care doriti sa il decriptati:- "))
+            decryptFile(input("Introduceti numele fisierului pe care doriti sa il decriptati:~ "))
 
         if selection == 'U':
             update()
