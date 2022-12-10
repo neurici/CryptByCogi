@@ -11,7 +11,7 @@ from colorama import init
 from Crypto.Cipher import AES
 from colorama import Fore, Style
 
-version = "1.0"
+version = "5.0"
 
 init()
 
@@ -45,7 +45,7 @@ def update():
     if version not in CryptByCogi:
         co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați? [da/nu] - ").lower()
         if co == "da":
-            os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git && cd .. && cd CryptByCogi')
+            os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git && sleep 3 && cd CryptByCogi)
         if co == "nu":
             print(Fore.LIGHTBLUE_EX + banner)
             choice()
