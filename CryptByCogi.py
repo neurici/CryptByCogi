@@ -29,10 +29,10 @@ banner = r'''
 |                          [Creat de Cogian Sergiu]                         |
 |                                                                           |
 |                                                                           |
-|		   Tastati 'E' pentru a cripta un fisier                            |
-|		   Tastati 'D' pentru a decripta un fisier                          |
-|		   Tastati 'I' pentru a inchide aplicatia                           |
-|          Tastați 'U' pentru actualizarea aplicatiei                        |
+|		   Tastati 'E' pentru a cripta un fisier                    |
+|		   Tastati 'D' pentru a decripta un fisier                  |
+|		   Tastati 'I' pentru a inchide aplicatia                   |
+|                  Tastați 'U' pentru actualizarea aplicatiei               |
 =============================================================================
 '''
 print(Fore.LIGHTBLUE_EX + banner)
@@ -40,26 +40,26 @@ print(Style.RESET_ALL)
 
 def update():
     print("Verificare actualizari...")
-    CryptByCogi = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/ScryptByCogi.py").content.decode(
+    CryptByCogi = requests.get("https://raw.githubusercontent.com/neurici/CryptByCogi/main/CryptByCogi.py").content.decode(
         "UTF-8")
     if version not in CryptByCogi:
         co = input("Este disponibilă o nouă versiune a CryptByCogi. Doriți să actualizați? [da/nu] - ").lower()
         if co == "da":
             os.system('cd .. && rm -rf CryptByCogi && git clone https://github.com/neurici/CryptByCogi.git')
-        if co == "no":
+        if co == "nu":
             print(Fore.LIGHTBLUE_EX + banner)
             choice()
-        else:
-            digg = str(input("Ne pare rau! Optiunea selectata nu este disponibila. Doriti sa renuntati[da/nu] - ").lower())
-            if digg == "da":
-                quit()
-                if digg == "nu":
-                    print(Fore.LIGHTBLUE_EX + banner)
-                    choice()
-                else:
-                    exit()
+#        else:
+#            digg = str(input("Ne pare rau! Optiunea selectata nu este disponibila. Doriti sa renuntati[da/nu] - ").lower())
+#            if digg == "da":
+#                quit()
+#                if digg == "nu":
+#                    print(Fore.LIGHTBLUE_EX + banner)
+#                    choice()
+#                else:
+#                    exit()
     else:
-        print("Secret Keeper is Upto Date.")
+        print("CryptByCogi este actualizat.")
         exit()
 
 def quit():
